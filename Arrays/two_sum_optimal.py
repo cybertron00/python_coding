@@ -24,8 +24,14 @@ from typing import List
 
 class Solution:
     def twoSum(self, nums: List[int] = None, target: int = 0) -> List[int]:
-        print("Called Solution")
-
+        lookup_dict = {}
+        for index, item in enumerate(nums):
+            value = target - item
+            if value in lookup_dict:
+                return [lookup_dict[value], index]
+            lookup_dict[item] = index
+        return None
 
 sol_obj = Solution()
-sol_obj.twoSum()
+result = sol_obj.twoSum([2,7,11,15], 9)
+print(result)
