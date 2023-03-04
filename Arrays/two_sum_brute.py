@@ -19,3 +19,13 @@ Constraints:
 Only one valid answer exists.
 
 """
+from typing import List
+
+
+class Solution:
+    def twoSum(self, nums: List[int] = None, target: int = 0) -> List[int]:
+        print("Called Solution")
+
+
+sol_obj = Solution()
+sol_obj.twoSum()
